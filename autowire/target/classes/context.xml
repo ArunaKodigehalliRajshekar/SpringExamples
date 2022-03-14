@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	 <bean id="bean" class="com.xworkz.autowire.Human"  autowire="constructor"> 
+	<!-- <bean   id="bean" class ="com.xworkz.autowire.Human"  autowire="byType"> -->  
+	<constructor-arg  value ="arunaa"  index="0"/>
+	<constructor-arg   value = "80.5"  index="1"/>
+	
+	</bean>
+	<bean  id="heart"  class="com.xworkz.autowire.Heart" autowire="constructor">
+	<constructor-arg   value="4"  index="0"/>
+	<constructor-arg    value="78" index="1"/>
+	</bean>
+</beans>
